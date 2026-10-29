@@ -18,4 +18,4 @@ services:
       - key: CONTACT_URL
         value: https://www.placidway.com
       - key: CRAWLER_USER_AGENT
-        value: PlacidWayKnowledgeBot/1.0 (assessment; contact: you@example.com)
+        value: "PlacidWayKnowledgeBot/1.0 (assessment; contact: gsnoor2k@gmail.com)"

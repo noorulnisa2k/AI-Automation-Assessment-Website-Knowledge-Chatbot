@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: placidway-bot
+    runtime: docker
+    plan: starter            # always-on; free tier sleeps after 15 min idle
+    healthCheckPath: /healthz
+    disk:
+      name: bot-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: CONTACT_URL
+        value: https://www.placidway.com
+      - key: CRAWLER_USER_AGENT
+        value: PlacidWayKnowledgeBot/1.0 (assessment; contact: you@example.com)
